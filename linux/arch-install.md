@@ -60,5 +60,12 @@ I am still using `bspwm`, so I generally select the `xorg` profile and install o
 I use `linux-zen` and it has never given me problems. It probably decreases my battery life by a slight amount versus `linux`, but I don't care enough to measure the difference.
 
 ### Additional packages
-The essentials for me are as follows:
-```librewolf bspwm sxhkd neovim-git networkmanager```
+The essentials for me are as follows.
+~~```librewolf-bin bspwm sxhkd neovim-git vscodium-bin networkmanager light-git paru```~~
+```bspwm sxhkd networkmanager```
+Other packages will be installed later.
+
+### Network configuration
+Already set up. I generally choose to use NetworkManager because of the authentication that OES uses.
+
+When finished, select `install` and wait. When `archinstall` is finished, you will see a prompt. Type `exit` and then `reboot`.
