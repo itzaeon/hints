@@ -62,10 +62,29 @@ I use `linux-zen` and it has never given me problems. It probably decreases my b
 ### Additional packages
 The essentials for me are as follows.
 ~~```librewolf-bin bspwm sxhkd neovim-git vscodium-bin networkmanager light-git paru```~~
-```bspwm sxhkd networkmanager```
+```bspwm sxhkd networkmanager git```
 Other packages will be installed later.
 
 ### Network configuration
 Already set up. I generally choose to use NetworkManager because of the authentication that OES uses.
 
 When finished, select `install` and wait. When `archinstall` is finished, you will see a prompt. Type `exit` and then `reboot`.
+
+## Post-installation
+**Note:** You may have to reconnect to the internet before running the following commands. 
+```bash
+## update packages
+sudo pacman -Syu
+
+## installing paru, a `yay` alternative
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+sudo sed -i 's/#Color/Color/g' /etc/pacman.conf # enable colors
+sudo sed -i 's/#VerbosePkgLists/VerbosePkgLists/g' /etc/pacman.conf # format name/version/size of packages
+sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf # download 5 packages at once
+
+sudo pacman -S bat # 
+
+sudo pacman -S librewolf-bin bspwm
+```
