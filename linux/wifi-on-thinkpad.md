@@ -6,3 +6,5 @@ nmcli connection add \
 > wifi-sec.key-mgmt wpa-eap 802-1x.eap ttls \
 > 802-1x.phase2-auth mschapv2 802-1x.identity "rathn"
 ```
+
+After, open `nmtui` (requires the `networkmanager` package) and connect using your credentials.
