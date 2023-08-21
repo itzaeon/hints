@@ -42,5 +42,23 @@ I have an English keyboard, so I always set English. (**TODO:** look into a Fren
 Select `Mirror region` and then the option closest to your location. Use `/` to search and `ENTER` to select.
 
 ### Disk configuration
-Select `Use a best-effort default partition layout` unless you have a good reason not to. Select the drive you with to install to and the filesystem. `ext4` has always been extremely stable for me and I highly reccomend it.
+Select `Use a best-effort default partition layout` unless you have a good reason not to. Select the drive you with to install to and the filesystem. `ext4` has always been extremely stable for me and I highly recommend it. When prompted to create a separate partition for `/home`, select yes. This may allow you to recover much of your data if your install becomes damaged in some way.
 
+### Bootloader
+`grub` is a field-tested bootloader that is used as the default on many distributions of Linux. It is most suitable for dual-boot systems or where the extra GUI is wanted. I haven't tested `systemd-boot`, `efistub`, or `limine` yet.
+
+### Swap
+I highly recommend reading ["In defence of swap"](https://chrisdown.name/2018/01/02/in-defence-of-swap.html) by Chris Down. Enabling swap has never caused me any problems, but many have reported the same with disabling it.
+
+### Profile
+I am still using `bspwm`, so I generally select the `xorg` profile and install on top of that. If you're less comfortable, try using `desktop` and selecting a window manager there. Graphics drivers are your preference; however, I generally select open-source unless I am using an nvidia GPU.
+
+### Audio server
+`Pulseaudio` is tried and true and is generally what I use. However, `pipewire` is extremely light and is presented as a good alternative to `pulseaudio`. Do some research and see which are used for your usecase.
+
+### Kernel
+I use `linux-zen` and it has never given me problems. It probably decreases my battery life by a slight amount versus `linux`, but I don't care enough to measure the difference.
+
+### Additional packages
+The essentials for me are as follows:
+```librewolf bspwm sxhkd neovim-git networkmanager```
