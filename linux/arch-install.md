@@ -86,7 +86,7 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf 
 paru -S --noconfirm bat # PKGBUILD syntax highlighting
 
 ## installing helpful utilities/programs
-paru -S --noconfirm man-db acpi
+paru -S --noconfirm man-db acpi xorg-xsetroot
 
 ## installing wm and browser
 paru -S --noconfirm librewolf-bin bspwm sxhkd neovim
