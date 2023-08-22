@@ -54,7 +54,7 @@ I highly recommend reading ["In defence of swap"](https://chrisdown.name/2018/01
 I am still using `bspwm`, so I generally select the `xorg` profile and install on top of that. If you're less comfortable, try using `desktop` and selecting a window manager there. Graphics drivers are your preference; however, I generally select open-source unless I am using an nvidia GPU.
 
 ### Audio server
-`Pulseaudio` is tried and true and is generally what I use. However, `pipewire` is extremely light and is presented as a good alternative to `pulseaudio`. Do some research and see which are used for your usecase.
+`pulseaudio` is tried and true and is generally what I use. However, `pipewire` is extremely light and is presented as a good alternative to `pulseaudio`. Do some research and see which are used for your usecase.
 
 ### Kernel
 I use `linux-zen` and it has never given me problems. It probably decreases my battery life by a slight amount versus `linux`, but I don't care enough to measure the difference.
