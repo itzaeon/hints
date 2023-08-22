@@ -1,0 +1,11 @@
+#!/bin/sh
+
+killall sxhkd
+sxhkd &
+
+xsetroot -cursor_name left_ptr & # fix mouse cursor
+
+bspc monitor -d 1 2 3 4 5
+bspc config border_width 2
+bspc config window_gap 2
+bspc config focus_follows_pointer true
