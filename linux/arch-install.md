@@ -91,10 +91,10 @@ paru -S --noconfirm man-db acpi xorg-xsetroot
 
 ## installing wm, browser, and terminal
 paru -S --noconfirm librewolf-bin bspwm sxhkd neovim alacritty rofi
-echo -e '#!/bin/sh\nbspwm &' >> ~/.xinitrc
+echo -e '#!/bin/sh\nexec bspwm' >> ~/.xinitrc
 mkdir ~/.config
 mkdir ~/.config/bspwm
 mkdir ~/.config/sxhkd
 curl -L -o ~/.config/bspwm/bspwmrc https://raw.githubusercontent.com/itzaeon/hints/main/linux/bspwmrc
-curl -L -o ~/.config/sxhkd/sxhkdrc 
+curl -L -o ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/itzaeon/hints/main/linux/sxhkdrc
 ```
