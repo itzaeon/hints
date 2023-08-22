@@ -74,7 +74,7 @@ When finished, select `install` and wait. When `archinstall` is finished, you wi
 **Note:** You may have to reconnect to the internet before running the following commands. 
 ```bash
 ## update packages
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 ## installing paru, a `yay` alternative
 git clone https://aur.archlinux.org/paru.git
@@ -83,8 +83,10 @@ makepkg -si
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf # enable colors
 sudo sed -i 's/#VerbosePkgLists/VerbosePkgLists/g' /etc/pacman.conf # format name/version/size of packages
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf # download 5 packages at once
+sudo paru -S --noconfirm bat # PKGBUILD syntax highlighting
 
-sudo pacman -S bat # 
+## installing helpful utilities/programs
+sudo paru -S --noconfirm man-db acpi
 
-sudo pacman -S librewolf-bin bspwm
+sudo paru librewolf-bin bspwm
 ```
