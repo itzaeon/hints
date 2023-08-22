@@ -40,4 +40,4 @@ super + shift + {Up,Down,Left,Right}
 
 # show help menu
 super + slash
-  sxhkd-help
+  /home/$USER/scripts/sxhkd-help
