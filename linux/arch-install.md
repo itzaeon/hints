@@ -83,10 +83,10 @@ makepkg -si
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf # enable colors
 sudo sed -i 's/#VerbosePkgLists/VerbosePkgLists/g' /etc/pacman.conf # format name/version/size of packages
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf # download 5 packages at once
-sudo paru -S --noconfirm bat # PKGBUILD syntax highlighting
+paru -S --noconfirm bat # PKGBUILD syntax highlighting
 
 ## installing helpful utilities/programs
-sudo paru -S --noconfirm man-db acpi
+paru -S --noconfirm man-db acpi
 
-sudo paru librewolf-bin bspwm
+paru -S --noconfirm librewolf-bin bspwm sxhkd neovim
 ```
