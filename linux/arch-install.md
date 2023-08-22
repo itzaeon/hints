@@ -88,6 +88,7 @@ paru -S --noconfirm bat # PKGBUILD syntax highlighting
 
 ## installing helpful utilities/programs
 paru -S --noconfirm man-db acpi xorg-xsetroot
+curl -L -o ~/.bashrc https://raw.githubusercontent.com/itzaeon/hints/main/linux/bashrc
 
 ## installing wm, browser, and terminal
 paru -S --noconfirm librewolf-bin bspwm sxhkd neovim alacritty rofi
@@ -98,7 +99,6 @@ mkdir ~/.config/sxhkd
 curl -L -o ~/.config/bspwm/bspwmrc https://raw.githubusercontent.com/itzaeon/hints/main/linux/bspwmrc
 curl -L -o ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/itzaeon/hints/main/linux/sxhkdrc
 mkdir ~/scripts
-echo "export PATH=$PATH:/home/$USER/scripts" >> ~/.bashrc
 curl -L -o ~/scripts/sxhkd-help https://raw.githubusercontent.com/itzaeon/hints/main/linux/scripts/sxhkd-help
 chmod +x ~/scripts/sxhkd-help
 ```
