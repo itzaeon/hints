@@ -28,3 +28,6 @@ super + {Up,Down,Left,Right}
 
 super + shift + {Up,Down,Left,Right}
   bspc node -s {north,south,west,east}
+
+super + slash
+  sxhkd-help
