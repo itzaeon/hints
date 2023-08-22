@@ -80,6 +80,7 @@ sudo pacman -Syu --noconfirm
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
+cd ~
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf # enable colors
 sudo sed -i 's/#VerbosePkgLists/VerbosePkgLists/g' /etc/pacman.conf # format name/version/size of packages
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf # download 5 packages at once
@@ -88,9 +89,12 @@ paru -S --noconfirm bat # PKGBUILD syntax highlighting
 ## installing helpful utilities/programs
 paru -S --noconfirm man-db acpi xorg-xsetroot
 
-## installing wm and browser
-paru -S --noconfirm librewolf-bin bspwm sxhkd neovim
+## installing wm, browser, and terminal
+paru -S --noconfirm librewolf-bin bspwm sxhkd neovim alacritty rofi
 echo -e '#!/bin/sh\nbspwm &' >> ~/.xinitrc
-
-
+mkdir ~/.config
+mkdir ~/.config/bspwm
+mkdir ~/.config/sxhkd
+curl -L -o ~/.config/bspwm/bspwmrc https://raw.githubusercontent.com/itzaeon/hints/main/linux/bspwmrc
+curl -L -o ~/.config/sxhkd/sxhkdrc 
 ```
