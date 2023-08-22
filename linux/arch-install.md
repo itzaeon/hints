@@ -88,5 +88,9 @@ paru -S --noconfirm bat # PKGBUILD syntax highlighting
 ## installing helpful utilities/programs
 paru -S --noconfirm man-db acpi
 
+## installing wm and browser
 paru -S --noconfirm librewolf-bin bspwm sxhkd neovim
+echo -e '#!/bin/sh\nbspwm &' >> ~/.xinitrc
+
+
 ```
